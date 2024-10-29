@@ -1,0 +1,30 @@
+.cart-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cart-item-image {
+  width: 100px;
+  height: auto;
+}
+
+.cart-item-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-controls button {
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  margin: 5px 10px;
+  cursor: pointer;
+  border-radius: 20%;
+}

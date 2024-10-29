@@ -1,0 +1,14 @@
+<div class="main-container">
+  <div class="content">
+      <app-header></app-header>
+      <app-product-details (addToCart)="addToCart($event)" [cartItems]="cartItems"></app-product-details>
+      <app-footer></app-footer>
+  </div>
+  <div class="sticky-cart" [ngStyle]="{'--cardWidth': cartItems.length > 0 ? 'auto' : '0'}">
+    <app-cart [cartItems]="cartItems" (cartUpdate)="cartUpdateHandler($event)"></app-cart>
+  </div>
+</div>
+
+<div class="black-screen">
+  Your screen resolution is too low. Please use a desktop with a resolution greater than 1200px for the best experience.
+</div>

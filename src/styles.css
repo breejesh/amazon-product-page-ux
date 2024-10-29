@@ -1,0 +1,36 @@
+:root {
+    --cart-width: 0px; /* Define the cart width variable */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Amazon Ember", Arial, sans-serif;
+}
+
+.main-container {
+    display: flex;
+    height: 100%;
+}
+
+.content {
+    flex-grow: 1;
+    margin-right: var(--cart-width); /* Use the cart width variable */
+}
+
+.sticky-cart {
+    width: var(--cart-width); /* Use the cart width variable */
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: #f7f7f7;
+    border-left: 1px solid #ddd;
+    overflow-y: auto;
+}
+
+header, footer {
+    width: calc(100% - var(--cart-width)) !important; /* Use the cart width variable */
+    margin-right: var(--cart-width) !important; /* Use the cart width variable */
+}

@@ -1,0 +1,19 @@
+<div class="cart">
+    <div class="cart-total text-center py-2">
+        <div><b>Cart Total</b> {{ getTotalAmount() | currency:'INR':'symbol' }}</div>
+    </div>
+    <hr/>
+    <div *ngFor="let item of cartItems" class="cart-item py-3">
+        <img [src]="item.images[0]" alt="{{ item.name }}" class="cart-item-image">
+        <div class="cart-item-details">
+            <div class="text-center mt-1">{{ item.price | currency:'INR':'symbol' }}</div>
+            <div class="quantity-controls mt-2">
+                <button (click)="decreaseQuantity(item)">-</button>
+                <span>{{ item.quantity }}</span>
+                <button (click)="increaseQuantity(item)">+</button>
+            </div>
+        </div>
+    </div>
+    <hr/>
+    <p *ngIf="cartItems.length === 0">Your cart is empty.</p>
+</div>
